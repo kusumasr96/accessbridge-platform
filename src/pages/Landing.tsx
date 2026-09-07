@@ -5,6 +5,7 @@ import SupportCards from "@/components/sections/SupportCards";
 import BlindAccessMode from "@/components/sections/BlindAccessMode";
 import AccessAI from "@/components/sections/AccessAI";
 import PlacesFinder from "@/components/sections/PlacesFinder";
+import EducationFinder from "@/components/sections/EducationFinder";
 import Jobs from "@/components/sections/Jobs";
 import Resources from "@/components/sections/Resources";
 import TechHub from "@/components/sections/TechHub";
@@ -45,6 +46,7 @@ export default function Landing() {
               <SocialProof />
               <AccessAI />
               <PlacesFinder />
+              <EducationFinder />
               <Jobs />
               <Resources />
               <TechHub />
