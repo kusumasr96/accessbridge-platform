@@ -16,6 +16,10 @@ export default defineConfig({
     // triggers "Invalid hook call" errors at runtime.
     dedupe: ["react", "react/jsx-runtime", "react-dom", "react-dom/client"],
   },
+  // Allow preview server to serve requests on Render URLs
+  preview: {
+    allowedHosts: true,
+  },
   build: {
     // Enable source maps for better debugging (disable in production if needed)
     sourcemap: false,
