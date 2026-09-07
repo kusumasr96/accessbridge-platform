@@ -1,0 +1,17 @@
+{
+  "name": "AccessBridge",
+  "short_name": "AccessBridge",
+  "description": "Bridging the gap between people and possibilities. Discover accessible places, resources, opportunities and assistive technology.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fbfc",
+  "theme_color": "#1a8a8a",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
