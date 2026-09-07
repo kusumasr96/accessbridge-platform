@@ -48,6 +48,10 @@ function Auth({ redirectAfterAuth }: AuthProps = {}) {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    document.title = "Sign In — AccessBridge";
+  }, []);
+
+  useEffect(() => {
     if (!authLoading && isAuthenticated) {
       navigate(redirect);
     }
@@ -123,7 +127,7 @@ function Auth({ redirectAfterAuth }: AuthProps = {}) {
               <div className="flex justify-center">
                     <img
                       src={logo}
-                      alt="Lock Icon"
+                      alt="AccessBridge logo — click to return to home page"
                       width={64}
                       height={64}
                       className="rounded-lg mb-4 mt-4 cursor-pointer"

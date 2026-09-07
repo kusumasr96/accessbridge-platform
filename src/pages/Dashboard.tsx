@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useAuth } from "@/hooks/use-auth";
 import { useNavigate } from "react-router";
 import { motion } from "framer-motion";
@@ -122,6 +122,10 @@ export default function Dashboard() {
   const { user, signOut } = useAuth();
   const navigate = useNavigate();
   const [tipIndex] = useState(() => Math.floor(Math.random() * tips.length));
+
+  useEffect(() => {
+    document.title = "Dashboard — AccessBridge";
+  }, []);
 
   const handleSignOut = async () => {
     await signOut();

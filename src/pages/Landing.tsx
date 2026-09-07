@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/sections/Hero";
 import SupportCards from "@/components/sections/SupportCards";
@@ -23,6 +23,12 @@ import { AccessibilityProvider } from "@/contexts/AccessibilityContext";
 export default function Landing() {
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [blindMode, setBlindMode] = useState(false);
+
+  useEffect(() => {
+    document.title = blindMode
+      ? "Blind Access Mode — AccessBridge"
+      : "AccessBridge — Bridging the gap between people and possibilities";
+  }, [blindMode]);
 
   return (
     <AccessibilityProvider>
