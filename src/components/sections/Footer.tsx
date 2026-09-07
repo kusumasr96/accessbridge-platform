@@ -1,4 +1,4 @@
-import { Accessibility, Mail, Phone, MapPin } from "lucide-react";
+import { Accessibility, Mail, Phone, MapPin, ArrowUp } from "lucide-react";
 
 const footerLinks = {
   platform: [
@@ -175,6 +175,20 @@ export default function Footer() {
               © {currentYear} AccessBridge. All rights reserved.
             </p>
           </div>
+        </div>
+      </div>
+
+      {/* Back to Top */}
+      <div className="border-t border-background/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-center">
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-background/10 text-background text-sm font-medium hover:bg-background/20 transition-colors"
+            aria-label="Scroll back to top of page"
+          >
+            <ArrowUp className="w-4 h-4" aria-hidden="true" />
+            Back to Top
+          </button>
         </div>
       </div>
 

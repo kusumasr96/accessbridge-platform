@@ -4,42 +4,64 @@ const supportCategories = [
   {
     icon: "🦯",
     title: "Blind & Visual Support",
-    description: "Find screen-reader-friendly resources, voice tools, accessible places and visual assistance.",
-    srLabel: "Blind and Visual Support — Find screen-reader-friendly resources, voice tools, accessible places and visual assistance.",
+    description:
+      "Find screen-reader-friendly resources, voice tools, accessible places and visual assistance.",
+    srLabel:
+      "Blind and Visual Support — Find screen-reader-friendly resources, voice tools, accessible places and visual assistance.",
+    target: "#places",
   },
   {
     icon: "👂",
     title: "Hearing Support",
-    description: "Discover captioning, communication tools and hearing accessibility resources.",
-    srLabel: "Hearing Support — Discover captioning, communication tools and hearing accessibility resources.",
+    description:
+      "Discover captioning, communication tools and hearing accessibility resources.",
+    srLabel:
+      "Hearing Support — Discover captioning, communication tools and hearing accessibility resources.",
+    target: "#resources",
   },
   {
     icon: "♿",
     title: "Mobility Support",
-    description: "Find wheelchair-friendly places, transportation resources and mobility information.",
-    srLabel: "Mobility Support — Find wheelchair-friendly places, transportation resources and mobility information.",
+    description:
+      "Find wheelchair-friendly places, transportation resources and mobility information.",
+    srLabel:
+      "Mobility Support — Find wheelchair-friendly places, transportation resources and mobility information.",
+    target: "#places",
   },
   {
     icon: "🗣️",
     title: "Communication Support",
-    description: "Explore speech-to-text, text-to-speech and communication tools.",
-    srLabel: "Communication Support — Explore speech-to-text, text-to-speech and communication tools.",
+    description:
+      "Explore speech-to-text, text-to-speech and communication tools.",
+    srLabel:
+      "Communication Support — Explore speech-to-text, text-to-speech and communication tools.",
+    target: "#techhub",
   },
   {
     icon: "🧠",
     title: "Cognitive Support",
-    description: "Find simplified information, learning resources and cognitive accessibility tools.",
-    srLabel: "Cognitive Support — Find simplified information, learning resources and cognitive accessibility tools.",
+    description:
+      "Find simplified information, learning resources and cognitive accessibility tools.",
+    srLabel:
+      "Cognitive Support — Find simplified information, learning resources and cognitive accessibility tools.",
+    target: "#resources",
   },
   {
     icon: "🤝",
     title: "Caregiver Support",
-    description: "Resources for families, caregivers, teachers and support workers.",
-    srLabel: "Caregiver Support — Resources for families, caregivers, teachers and support workers.",
+    description:
+      "Resources for families, caregivers, teachers and support workers.",
+    srLabel:
+      "Caregiver Support — Resources for families, caregivers, teachers and support workers.",
+    target: "#caregiver",
   },
 ];
 
 export default function SupportCards() {
+  const handleClick = (target: string) => {
+    document.querySelector(target)?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section
       id="explore"
@@ -76,6 +98,7 @@ export default function SupportCards() {
               transition={{ duration: 0.4, delay: i * 0.08 }}
             >
               <button
+                onClick={() => handleClick(cat.target)}
                 className="w-full text-left p-6 rounded-2xl bg-card border border-border hover:border-primary/30 hover:shadow-lg transition-all group"
                 aria-label={cat.srLabel}
               >
