@@ -14,6 +14,8 @@ import CaregiverCorner from "@/components/sections/CaregiverCorner";
 import DayPlanner from "@/components/sections/DayPlanner";
 import BarrierReport from "@/components/sections/BarrierReport";
 import About from "@/components/sections/About";
+import SocialProof from "@/components/sections/SocialProof";
+import FAQ from "@/components/sections/FAQ";
 import Footer from "@/components/sections/Footer";
 import AccessibilitySettingsPanel from "@/components/sections/AccessibilitySettingsPanel";
 import { AccessibilityProvider } from "@/contexts/AccessibilityContext";
@@ -34,6 +36,7 @@ export default function Landing() {
             <>
               <Hero onEnterBlindMode={() => setBlindMode(true)} />
               <SupportCards />
+              <SocialProof />
               <AccessAI />
               <PlacesFinder />
               <Jobs />
@@ -43,6 +46,7 @@ export default function Landing() {
               <DayPlanner />
               <BarrierReport />
               <CommunityStories />
+              <FAQ />
               <CaregiverCorner />
               <About />
             </>
